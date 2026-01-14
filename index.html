@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-24">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zuby AI Content | Exploring the Future of AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --accent-blue: #3b82f6;
+        --accent-purple: #8b5cf6;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0a0a0c;
+        color: #f3f4f6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, h4 {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .glass-morphism {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .ai-glow {
+        box-shadow: 0 0 30px rgba(96, 165, 250, 0.15);
+      }
+      .grid-bg {
+        background-image: 
+          radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+        background-size: 40px 40px;
+      }
+      .noise-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        opacity: 0.02;
+        z-index: 9999;
+        pointer-events: none;
+        background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0c;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #444;
+      }
+    </style>
+    <script>
+      // Polyfill for process.env which is required by the SDK but often missing in raw browser ESM
+      window.process = window.process || { env: {} };
+    </script>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.3/client",
+    "lucide-react": "https://esm.sh/lucide-react@^0.475.0",
+    "@google/genai": "https://esm.sh/@google/genai@latest",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+  </head>
+  <body class="grid-bg">
+    <div class="noise-bg"></div>
+    <div id="root"></div>
+  </body>
+</html>
